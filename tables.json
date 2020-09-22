@@ -1,0 +1,65 @@
+{
+  "tblPersons": {
+    "count": 10,
+    "relations": {
+      "addressId": {
+        "table": "tblAddresses",
+        "field": "id"
+      }
+    },
+    "fields": {
+      "id": {
+        "type": "string",
+        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]"
+      },
+      "firstName": {
+        "type": "string",
+        "format": "@names.firstNames;"
+      },
+      "lastName": {
+        "type": "string",
+        "format": "@names.lastNames;"
+      },
+      "age": {
+        "type": "number",
+        "format": "<15,50>"
+      },
+      "phoneNumber": {
+        "type": "string",
+        "format": "09<10,30>[0-9:7]"
+      }
+    }
+  },
+  "tblAddresses": {
+    "count": 10,
+    "fields": {
+      "id": {
+        "type": "string",
+        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]"
+      },
+      "address": {
+        "type": "string",
+        "format": "No <1,1000>, @locations.streets;, @locations.cities;"
+      }
+    }
+  },
+  "tblSchools": {
+    "count": 10,
+    "relations": {
+      "addressId": {
+        "table": "tblAddresses",
+        "field": "id"
+      }
+    },
+    "fields": {
+      "name": {
+        "type": "string",
+        "format": "@names.schools;"
+      },
+      "manager": {
+        "type": "string",
+        "format": "@names.lastNames;, @names.firstNames;"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "names": {
+      "firstNames": [
+        "Jack",
+        "Joe",
+        "John",
+        "James"
+      ],
+      "lastNames": [
+        "Gonjishke",
+        "Gandomi",
+        "Gigavolta",
+        "Bond"
+      ],
+      "schools": [
+        "Shahid John Wick",
+        "Engelaab-e Eslaami-e Faraance",
+        "Shohadaa-ye Hiroshimaa"
+      ]
+    },
+  "locations": {
+    "cities": [
+      "New York",
+      "London",
+      "Los Angeles",
+      "Tokyo",
+      "Tehraan"
+    ],
+    "streets": [
+      "Highway 1",
+      "Khalij-e Faars st.",
+      "Simpsons st."
+    ]
+  }
+}
