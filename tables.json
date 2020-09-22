@@ -5,6 +5,10 @@
       "addressId": {
         "table": "tblAddresses",
         "field": "id"
+      },
+      "schoolId": {
+        "table": "tblSchools",
+        "field": "id"
       }
     },
     "fields": {
@@ -52,6 +56,10 @@
       }
     },
     "fields": {
+      "id": {
+        "type": "string",
+        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]"
+      },
       "name": {
         "type": "string",
         "format": "@names.schools;"
