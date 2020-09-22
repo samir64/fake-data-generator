@@ -123,13 +123,13 @@ class fake_data:
     else:
       rowCount = 10
       result = []
-      row = {}
 
       if "count" in table:
         rowCount = table["count"]
         pass
       
       for i in range(rowCount):
+        row = {}
         if "relations" in table:
           for relation in table["relations"]:
             out[table["relations"][relation]["table"]] = self.__table(out, table["relations"][relation]["table"])
