@@ -163,5 +163,5 @@ class fake_data:
 # %%
 if __name__ == "__main__":
   fd = fake_data("./samples.json", "tables.json")
-  print(json.dumps(fd.generate(), indent=2))
+  print(json.dumps(fd.generate(), ensure_ascii=False, indent=2))
   pass
