@@ -138,11 +138,26 @@ class fake_data:
           pass
 
         for field in table["fields"]:
+          accepted = False
+          while not accepted:
+            field_value = self.__format(table["fields"][field]["format"])
+            accepted = ("unique" not in table["fields"][field]) or (not table["fields"][field]["unique"])
+            if not accepted:
+              accepted = True
+              i = 0
+              while accepted and i < len(result):
+                if result[i][field] == field_value:
+                  accepted = False
+                  pass
+                i += 1
+                pass
+              pass
+            pass
           if table["fields"][field]["type"] == "number":
-            row[field] = int(self.__format(table["fields"][field]["format"]))
+            row[field] = int(field_value)
             pass
           else:
-            row[field] = self.__format(table["fields"][field]["format"])
+            row[field] = field_value
             pass
           pass
 
@@ -163,5 +178,5 @@ class fake_data:
 # %%
 if __name__ == "__main__":
   fd = fake_data("./samples.json", "tables.json")
-  print(json.dumps(fd.generate(), ensure_ascii=False, indent=2))
+  print(json.dumps(fd.generate(), ensure_ascii=True, indent=2))
   pass

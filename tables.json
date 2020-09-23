@@ -1,6 +1,6 @@
 {
   "tblPersons": {
-    "count": 10,
+    "count": 100,
     "relations": {
       "addressId": {
         "table": "tblAddresses",
@@ -14,7 +14,8 @@
     "fields": {
       "id": {
         "type": "string",
-        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]"
+        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]",
+        "unique": true
       },
       "firstName": {
         "type": "string",
@@ -35,11 +36,12 @@
     }
   },
   "tblAddresses": {
-    "count": 10,
+    "count": 100,
     "fields": {
       "id": {
         "type": "string",
-        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]"
+        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]",
+        "unique": true
       },
       "address": {
         "type": "string",
@@ -48,7 +50,7 @@
     }
   },
   "tblSchools": {
-    "count": 10,
+    "count": 100,
     "relations": {
       "addressId": {
         "table": "tblAddresses",
@@ -58,7 +60,8 @@
     "fields": {
       "id": {
         "type": "string",
-        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]"
+        "format": "[0-9a-f:5]-[0-9a-f:5,15]-[0-9a-f:5]",
+        "unique": true
       },
       "name": {
         "type": "string",
