@@ -178,5 +178,9 @@ class fake_data:
 # %%
 if __name__ == "__main__":
   fd = fake_data("./samples.json", "tables.json")
-  print(json.dumps(fd.generate(), ensure_ascii=True, indent=2))
+  data = json.dumps(fd.generate(), ensure_ascii=False, indent=2)
+  export = open("./export.json", "w")
+  export.write(data)
+  export.close()
+  print(data)
   pass
